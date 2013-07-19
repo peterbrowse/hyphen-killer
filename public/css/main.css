@@ -44,6 +44,32 @@ body {
 				font-size: 75px;
 			}
 			
+			.head {
+				margin-top: 50px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			.head img {
+				cursor: pointer;
+			}
+			
+			.head p {
+				font-size: 18px;
+				margin-top: 40px;
+				line-height: 22px;
+				cursor: pointer;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+		
+		.smoke {
+			position: fixed;
+		}
+			
 			@media screen and (max-width: 900px) {
 				.target-word, .target-word span {
 					font-size: 65px;
@@ -72,30 +98,21 @@ body {
 				.target-word, .target-word span {
 					font-size: 25px;
 				}
+				
+				.head img {
+					width: 100px;
+				}
+				
+				.head p {
+					margin-top: 20px;
+					font-size: 14px;
+					line-height: 18px;
+				}
+				
+				.head {
+					margin-top: 20px;
+				}
 			}
-			
-		.head {
-			margin-top: 50px;
-		}
-			.head img {
-				cursor: pointer;
-			}
-			
-			.head p {
-				font-size: 18px;
-				margin-top: 40px;
-				cursor: pointer;
-				-webkit-touch-callout: none;
-				-webkit-user-select: none;
-				-khtml-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			}
-		
-		.smoke {
-			position: fixed;
-		}
 	
 	.social {
 		opacity: 0;
