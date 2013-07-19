@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'FuturaStdMediumCondensedOblique';
+    src: url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensedoblique.eot');
+    src: url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensedoblique.eot') format('embedded-opentype'),
+         url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensedoblique.woff') format('woff'),
+         url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensedoblique.ttf') format('truetype'),
+         url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensedoblique.svg#FuturaStdMediumCondensedOblique') format('svg');
+}
+
+@font-face {
+    font-family: 'FuturaStdMediumCondensed';
+    src: url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensed.eot');
+    src: url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensed.eot') format('embedded-opentype'),
+         url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensed.woff') format('woff'),
+         url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensed.ttf') format('truetype'),
+         url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensed.svg#FuturaStdMediumCondensed') format('svg');
+}
+
+@font-face {
+    font-family: 'FuturaStdBoldCondensed';
+    src: url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensedbold.eot');
+    src: url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensedbold.eot') format('embedded-opentype'),
+         url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensedbold.woff') format('woff'),
+         url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensedbold.ttf') format('truetype'),
+         url('http://www.sigur-ros.co.uk/include/fonts/futurastd-condensedbold.svg#FuturaStdBoldCondensed') format('svg');
+}
+
+
+@font-face {
+    font-family: 'ScalaSansCnRegular';
+    src: url('http://www.sigur-ros.co.uk/include/fonts/scalasans-regularcn.eot');
+    src: url('http://www.sigur-ros.co.uk/include/fonts/scalasans-regularcn.eot') format('embedded-opentype'),
+         url('http://www.sigur-ros.co.uk/include/fonts/scalasans-regularcn.woff') format('woff'),
+         url('http://www.sigur-ros.co.uk/include/fonts/scalasans-regularcn.ttf') format('truetype'),
+         url('http://www.sigur-ros.co.uk/include/fonts/scalasans-regularcn.svg#ScalaSansCnRegular') format('svg');
+}
+
+body {
+	font-family: 'ScalaSansCnRegular', 'Arial Narrow', 'Helvetica Light', Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	letter-spacing: 0.5px;
+  	color: #fff;
+   	-webkit-font-smoothing: antialiased !important;
+   	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+   	font-style: normal;
+   	opacity:0.99;
+}
+
