@@ -137,7 +137,7 @@ body {
 			display: table-cell;
 			vertical-align: middle;
 			overflow: hidden;
-			padding-left: 10px;
+			/*padding-left: 10px;*/
 		}
 			.tweet-button, .tweet-button iframe {
 				width: 90px;
