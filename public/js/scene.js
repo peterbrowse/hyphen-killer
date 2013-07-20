@@ -28,8 +28,7 @@ var info = "Info: ", count = 0;
 	   		count++;
     	},
     	changeWord: function() {
-    		var split_word = this.word.split("-");
-    		var new_word = split_word[0]+"<span class='target'>-</span>"+split_word[1];
+    		var new_word = this.word.replace(/-/g,'<span class="target">-</span>');
     		$('.target-word').html(new_word);
     	},
     	changeSound: function() {
@@ -41,11 +40,16 @@ var info = "Info: ", count = 0;
     			ga('send', 'event', 'User Click', 'Killed Hyphen', 'Head Clicked');
     			var img_src = '/images/Smoke.gif';
     			img_src = img_src.replace(/\?.*$/,"")+"?x="+Math.random();
-    			$('.area-inner').append('<div class="smoke"><img src="'+img_src+'" /></smoke>');
-    			var position = $('span.target').position();
-    			var font_size = parseInt($('span.target').css('line-height'), 10);
-    			$('.smoke').css('left',(position.left - 80));
-    			$('.smoke').css('top',(position.top - (200-(font_size/1.4))));
+    			var smoke_count = 1;
+    			$('span.target').each(function() {
+	    			$('.area-inner').append('<div id="smoke_'+smoke_count+'" class="smoke"><img src="'+img_src+'" /></smoke>');
+					var position = $(this).position();
+					var font_size = parseInt($('span.target').css('line-height'), 10);
+					$('#smoke_'+smoke_count).css('left',(position.left - 80));
+					$('#smoke_'+smoke_count).css('top',(position.top - (200-(font_size/1.4))));
+					smoke_count++;	
+    			});
+    			
     			$('span.target').fadeTo(41,0);
     			$('.head').off('click');
     			track.play({
