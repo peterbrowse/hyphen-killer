@@ -70,7 +70,25 @@ function soundInit(callback) {
 	});
 }
 
+function shuffle(array){
+	var counter = array.length, temp, index;
+	
+	while (counter > 0){
+		index = (Math.random() * counter--) | 0;
+		
+		
+		temp = array[counter];
+		array[counter] = array[index];
+		array[index] = temp;
+	}
+	
+	return array;
+}
+
 function preload() {
+	
+	shuffle(colors);
+	
 	var wordIndex = Math.floor(Math.random()*leftOver.length);
 	var word = leftOver[wordIndex];
 	leftOver.splice(wordIndex, 1);

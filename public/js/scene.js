@@ -1,4 +1,4 @@
-var info = "Info: ";
+var info = "Info: ", count = 0;
 
 (function ($) {
     "use strict";
@@ -20,9 +20,12 @@ var info = "Info: ";
     		this.changeColor();
     		this.changeWord();
     	},
-    	changeColor: function() {
-    		var color = colors[Math.floor(Math.random()*colors.length)];
-    		$('.container').css('background-color',color);
+       	changeColor: function() {
+   	      	if (count >= colors.length) {
+   	      		count = 0;
+	    	}	
+			$('.container').css('background-color',colors[count]);    		
+	   		count++;
     	},
     	changeWord: function() {
     		var split_word = this.word.split("-");
@@ -56,7 +59,7 @@ var info = "Info: ";
 						if (leftOver.length == 0){
 							wordList.forEach(function(word){
 								leftOver.push(word);
-							});
+							});ı
 						}
   					}
 				});
