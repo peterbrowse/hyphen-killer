@@ -59,7 +59,7 @@ var info = "Info: ", count = 0;
 						if (leftOver.length == 0){
 							wordList.forEach(function(word){
 								leftOver.push(word);
-							});ı
+							});
 						}
   					}
 				});
