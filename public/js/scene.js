@@ -15,6 +15,7 @@ var info = "Info: ";
     
     Scene.prototype = {
     	init: function () {
+	
     		this.changeSound();
     		this.changeColor();
     		this.changeWord();
@@ -45,9 +46,18 @@ var info = "Info: ";
     			$('span.target').fadeTo(41,0);
     			$('.head').off('click');
     			track.play({
-  					onfinish: function() {
-    					var newWord = wordList[Math.floor(Math.random()*wordList.length)];
+  					onfinish: function() {												
+						var wordIndex = Math.floor(Math.random()*leftOver.length);
+    					var newWord = leftOver[wordIndex];
+																	
     					$('.area-inner').scene(newWord);
+						leftOver.splice(wordIndex, 1);
+						
+						if (leftOver.length == 0){
+							wordList.forEach(function(word){
+								leftOver.push(word);
+							});
+						}
   					}
 				});
 				setTimeout(function() {

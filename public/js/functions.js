@@ -1,8 +1,10 @@
 var static_images = [
 		'/images/Hova.png',
 		'/images/Smoke.gif'
-	], wordList = []
-	,colors = [
+	], 
+	wordList = [],
+	leftOver = [],
+	colors = [
 		'#d70000',
 		'#ff9000',
 		'#ffd200',
@@ -36,6 +38,7 @@ if(Modernizr.audio.mp3) {
 $.getJSON('/get_word', function(words) {
 	words.forEach(function(word) {
 		wordList.push(word.word);
+		leftOver.push(word.word);
 	});
 	soundInit(function(ready){
 		if(ready) {
@@ -68,8 +71,10 @@ function soundInit(callback) {
 }
 
 function preload() {
-	var word = wordList[Math.floor(Math.random()*wordList.length)];
-	
+	var wordIndex = Math.floor(Math.random()*leftOver.length);
+	var word = leftOver[wordIndex];
+	leftOver.splice(wordIndex, 1);
+		
 	var loader = new PxLoader();
 	var audio_count = 1;
 	
