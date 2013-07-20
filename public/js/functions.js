@@ -84,11 +84,6 @@ function preload() {
 		loader.add(new PxLoaderImage(item));
 	});
 	
-	loader.addProgressListener(function (event) {
-			var percentage = Math.round(event.completedCount / event.totalCount * 100);
-			$('.counter span').text(percentage);
-	});
-	
 	loader.addCompletionListener(function(e) {
 		$('.area-inner').scene(word);
 	});

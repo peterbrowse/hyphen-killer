@@ -34,6 +34,7 @@ var info = "Info: ";
     		
     		$('.head').off('click');
     		$('.head').on('click', function() {
+    			ga('send', 'event', 'User Click', 'Killed Hyphen', 'Head Clicked');
     			var img_src = '/images/Smoke.gif';
     			img_src = img_src.replace(/\?.*$/,"")+"?x="+Math.random();
     			$('.area-inner').append('<div class="smoke"><img src="'+img_src+'" /></smoke>');
