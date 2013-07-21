@@ -1,4 +1,4 @@
-var info = "Info: ", count = 0;
+var info = "Info: ", count = 0, audioCount;
 
 (function ($) {
     "use strict";
@@ -32,8 +32,12 @@ var info = "Info: ", count = 0;
     		$('.target-word').html(new_word);
     	},
     	changeSound: function() {
-    		var randomTrack = Math.floor(Math.random() * 5) + 1;
+    		var randomTrack = Math.floor(Math.random() * 5) + 1;		  		
+    		while (randomTrack == audioCount){
+	    		randomTrack = Math.floor(Math.random() * 5) + 1;
+    		}
     		var track = soundManager.getSoundById('track_'+randomTrack);
+    		audioCount = randomTrack;
     		
     		$('.head').off('click');
     		$('.head').on('click', function() {

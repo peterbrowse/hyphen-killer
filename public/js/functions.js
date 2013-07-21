@@ -88,6 +88,7 @@ function shuffle(array){
 function preload() {
 	
 	shuffle(colors);
+	shuffle (audio);
 	
 	var wordIndex = Math.floor(Math.random()*leftOver.length);
 	var word = leftOver[wordIndex];
